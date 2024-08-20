@@ -39,7 +39,7 @@ namespace AccountService.Controllers
             string subject = "Cuenta Aprobada";
             string message = $"Hola {user.NombreUsuario} {user.ApellidoUsuario},\n\n" +
                              $"Su cuenta ha sido aprobada. Sus credenciales son:\n" +
-                             $"Usuario: {user.Email}\nContraseña temporal: {temporaryPassword}";
+                             $"Usuario: {user.Cedula}\nContraseña temporal: {temporaryPassword}";
 
             await _emailService.SendEmailAsync("ginno.taimal@gmail.com", subject, message);
 
